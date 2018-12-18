@@ -59,3 +59,11 @@ plt.xlabel('Track Isolation Variable')
 plt.ylabel('Count')
 plt.legend()
 plt.show()
+
+#Vertex chi^2
+plt.hist(signal.VertexChi2, range=(0,16), bins=100, label='Signal', alpha=0.7,normed=True)
+plt.hist(nonsignal.VertexChi2,range=(0,16),bins=100, label='Background',alpha=0.7,normed=True)
+plt.xlabel(r'Vertex $\chi^2$')
+plt.ylabel('Normalized Fraction')
+plt.legend()
+plt.show()
