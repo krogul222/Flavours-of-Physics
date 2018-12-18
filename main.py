@@ -67,3 +67,11 @@ plt.xlabel(r'Vertex $\chi^2$')
 plt.ylabel('Normalized Fraction')
 plt.legend()
 plt.show()
+
+#Lifetime
+plt.hist(signal.LifeTime, range=(0,1e-2), bins=50, label='Signal', alpha=0.7,normed=True)
+plt.hist(nonsignal.LifeTime,range=(0,1e-2),bins=50, label='Background',alpha=0.7,normed=True)
+plt.xlabel('Lifetime')
+plt.ylabel('Count')
+plt.legend()
+plt.show()
