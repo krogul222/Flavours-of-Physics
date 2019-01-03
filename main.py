@@ -75,3 +75,14 @@ plt.xlabel('Lifetime')
 plt.ylabel('Count')
 plt.legend()
 plt.show()
+
+#SPDhits
+plt.hist(signal.LifeTime, range=(0,1e-2), bins=50, label='Signal', alpha=0.7,normed=True)
+plt.hist(nonsignal.LifeTime,range=(0,1e-2),bins=50, label='Background',alpha=0.7,normed=True)
+plt.xlabel('Lifetime')
+plt.ylabel('Count')
+plt.legend()
+plt.show()
+
+#Train-test split
+X_train, X_valid, y_train, y_valid = train_test_split(X, y, test_size = 0.10, random_state = 42)
