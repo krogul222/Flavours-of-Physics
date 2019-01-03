@@ -86,4 +86,6 @@ plt.legend()
 plt.show()
 
 #Train-test split
-X_train, X_valid, y_train, y_valid = train_test_split(X, y, test_size = 0.10, random_state = 42)
+X = train.drop(['signal'], axis = 1)
+y = train['signal']
+X_train, X_valid, y_train, y_valid = train_test_split(train, y, test_size = 0.10, random_state = 42)
